@@ -12,7 +12,7 @@ import axios from 'axios';
 window.axios = axios;
 
 // const store = createStore(() => [], {}, applyMiddleware());
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(reduxThunk));
 
 ReactDOM.render(
     <Provider store={store}><App/></Provider>,
