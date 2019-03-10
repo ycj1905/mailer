@@ -21,7 +21,6 @@ app.use(
     keys: [key.cookieKey]
   })
 );
-
 app.use(passport.initialize());
 app.use(passport.session());
 

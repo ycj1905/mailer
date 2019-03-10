@@ -7,6 +7,9 @@ const key = require('../config/key');
 const User = mongoose.model('users');
 
 passport.serializeUser((user, done) => {
+  // done(errorCalbk, ..)
+  // user ID is not profile id, is MongoDB Object ID,
+  // we can use of different authentication providers
   done(null, user.id);
 });
 
